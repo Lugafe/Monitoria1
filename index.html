@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ProfileStyle.css">
 </head>
 <body>
     <div class="container">
@@ -30,6 +30,32 @@
             <div class="col-2"></div>
         </div>
     </div>
+
+    <section id="miniprofile">
+        <figure onclick="handleBrowseClick('input-image-hidden');">
+          <img src="img/BlankPFP.webp" alt="Profile Picture" class="ProfilePicture" id="output" width="500" height="500">
+          <figcaption>Calamitas</figcaption>
+        </figure>
+        <input style="display:none" type="file" accept="image/*" onchange="loadFile(event, 'output')" id="input-image-hidden">
+        <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore reprehenderit ipsum in nam officia deserunt alias, veniam saepe quas tenetur cumque ullam aperiam placeat possimus. Ratione fugiat est placeat.</p>
+        
+        <a href=""><section class="SocButton">
+          <img src="img/Insta.png" alt="instagram icon">
+          <p>INSTAGRAM</p>
+        </section></a>
+        <br>
+        <a href=""><section class="SocButton">
+          <img src="img/Linkedin.png" alt="Linkedin icon">
+          <p>LINKEDIN</p>
+        </section></a>
+        <br>
+        <a href=""><section class="SocButton">
+          <img src="img/Youtube.png" alt="youtube icon">
+          <p>YOUTUBE</p>
+        </section></a>
+        <br>
+      </section>
+
     <script>
         var menuItems = document.getElementById("menuItems");
         menuItems.style.maxHeight = "0px";
@@ -46,4 +72,3 @@
     
 </body>
 </html>
-
