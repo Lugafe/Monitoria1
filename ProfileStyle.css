@@ -8,6 +8,15 @@
     align-items: center;
     padding: 20px;
 }
+.LogoName{
+    font-family: "Koulen", sans-serif;  
+    /* margin: 18px 75px 0 0; */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3A1D5D;
+    font-size: 1.2rem;
+    height: 100%;
+}
 nav{
     flex: 1;
     text-align: right;
