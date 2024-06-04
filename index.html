@@ -32,31 +32,49 @@
             <div class="col-2"></div>
         </div>
     </div>
+    <div class="perfil">
+        <div class="header-perfil" onclick="handleBrowseClick('input-image-hidden');">
+            <img src="imgs/BlankPFP.webp" alt="Profile Picture" class="ProfilePicture" id="output">
+            <h3>Legolas</h3>
+            <input style="display:none" type="file" accept="image/*" onchange="loadFile(event, 'output')"
+                id="input-image-hidden">
+            
+        </div> 
+        <div class="texto">
+            <h4 class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore reprehenderit ipsum in
+                nam officia deserunt alias, veniam saepe quas tenetur cumque ullam aperiam placeat possimus. Ratione
+                fugiat est placeat.</h4>
+        </div>       
+        <div class="div-social">
 
-    <section id="miniprofile">
-        <figure onclick="handleBrowseClick('input-image-hidden');">
-          <img src="imgs/BlankPFP.webp" alt="Profile Picture" class="ProfilePicture" id="output" width="500" height="500">
-          <figcaption>Calamitas</figcaption>
-        </figure>
-        <input style="display:none" type="file" accept="image/*" onchange="loadFile(event, 'output')" id="input-image-hidden">
-        <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore reprehenderit ipsum in nam officia deserunt alias, veniam saepe quas tenetur cumque ullam aperiam placeat possimus. Ratione fugiat est placeat.</p>
+            <div class="linksSocial">
+                <a href="">
+                    <div class="btnSocial">
+                        <img src="imgs/Insta.png" alt="instagram icon" width="50px">
+                        <p>INSTAGRAM</p>
+                    </div>
+                </a>
+            </div>
+            <div class="linksSocial">
+                <a href="">
+                    <div class="btnSocial">
+                        <img src="imgs/Linkedin.png" alt="Linkedin icon" width="50px">
+                        <p>LINKEDIN</p>
+                    </div>
+                </a>
+            </div>
+            <div class="linksSocial">
+                <a href="">
+                    <div class="btnSocial">
+                        <img src="imgs/Youtube.png" alt="youtube icon" width="50px">
+                        <p>YOUTUBE</p>
+                    </div>
+                </a>
+            </div>
+        </div>
         
-        <a href=""><section class="SocButton">
-          <img src="imgs/Insta.png" alt="instagram icon">
-          <p>INSTAGRAM</p>
-        </section></a>
-        <br>
-        <a href=""><section class="SocButton">
-          <img src="imgs/Linkedin.png" alt="Linkedin icon">
-          <p>LINKEDIN</p>
-        </section></a>
-        <br>
-        <a href=""><section class="SocButton">
-          <img src="imgs/Youtube.png" alt="youtube icon">
-          <p>YOUTUBE</p>
-        </section></a>
-        <br>
-      </section>
+    </div>
+    
 
     <script>
         var menuItems = document.getElementById("menuItems");

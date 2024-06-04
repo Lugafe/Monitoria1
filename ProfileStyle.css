@@ -3,19 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar{
     display: flex;
     align-items: center;
     padding: 20px;
-}
-.LogoName{
-    font-family: "Koulen", sans-serif;  
-    /* margin: 18px 75px 0 0; */
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #3A1D5D;
-    font-size: 1.2rem;
-    height: 100%;
 }
 nav{
     flex: 1;
@@ -36,6 +32,15 @@ a{
 p{
     color: #555;
 }
+.LogoName{
+    font-family: "Koulen", sans-serif;  
+    /* margin: 18px 75px 0 0; */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3A1D5D;
+    font-size: 1.2rem;
+    height: 100%;
+}
 .container{
     max-width: 1300px;
     margin: auto;
@@ -48,36 +53,9 @@ p{
     display: none;
 }
 
-@media only screen and (max-width: 800px){
-   
-    nav ul{
-        margin-top: 20px;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        
-    }
-    nav ul li a{
-        color: white;
-    }
-    .menu-icon{        
-        display: block;
-        cursor: pointer;
-    }
-}
 
-/* Miniprofile 15%*/
+
+/* Miniprofile 15%
 #miniprofile {
     background-color: aliceblue;
     display: block;
@@ -91,12 +69,19 @@ p{
     
     
 }
+*/
 
-.ProfilePicture {
-    max-width: 100%;
-    height: auto !important;
-    padding: 12%;
-    border-radius: 500000px;
+.header-perfil img{
+    max-width: 9.375rem;    
+    border-radius: 10rem;    
+    margin-top: 1rem;
+    
+    padding-left: auto;
+    padding-right: auto;
+}
+.perfil h4{
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -107,39 +92,105 @@ figcaption {
     font-size: 25px;
 }
 
-.bio {
-    font-size: x-small;
+
+.perfil{
+    display: flex;
+    flex-wrap: wrap;
+    display: block;
+    position: absolute;
+    background: aliceblue;
+    border-radius: 6rem;
+    left: 1;
+    width: 12rem;
+    margin-left: 3rem;    
+    padding-left: 0.938rem;
+    padding-right: 0.625rem;
+    padding-bottom: 3.5rem;
+    max-width: 15rem;
+    
+}
+.perfil div{
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-perfil{
+    display: block;
     text-align: center;
-    padding-bottom: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
+}
+.header-perfil h4{
+    width: 10rem;
+    text-align: center;
+}
+.btnSocial{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    width: 11rem;
 }
 
-/* Social media button */
-.SocButton {
-    background-color: rgb(222, 247, 255);
-    border: 2px rgb(210, 210, 210);
-    border-style: dashed;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;    
-    padding-left: 5px;
-    margin: 0 10% 0;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.btnSocial img{
+    width: 30px;
 }
-.SocButton>img {
-    display: inline-block;
-    width: 35px;
-    font-style: none;
-    text-decoration: none;
+.btnSocial p{
+    margin: auto;
+    font-weight:900;
 }
-.SocButton>p {
-    color: black;
-    display: inline-block;
-    font-family: monospace;
-    font-weight: 900;
-    font-size:large;
+
+
+@media only screen and (max-width: 800px){
+    *{
+        margin-left: 0.5rem;
+        margin-right: 5rem;
+    }
+    
+    nav ul{
+        margin-top: 20px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;        
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;        
+    }
+    nav ul li a{
+        color: white;
+    }
+    .menu-icon{        
+        display: block;
+        cursor: pointer;
+    }    
+    .perfil{
+        margin-top: 9rem;       
+        display: block; 
+        max-width: 100%;
+        width: 100%; 
+        border-radius: 50px;        
+        margin-left: 0;
+        margin-right: 2rem;
+        background: aliceblue;      
+    }    
+    .perfil h3{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px ;
+    }    
+    .div-social{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100px;        
+    }
+    .linksSocial {
+        width: 50px;        
+    }
+    .linksSocial P{
+        display: none;
+    }
+
 }
