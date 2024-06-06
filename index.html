@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ProfileStyle.css">
 </head>
+
 <body>
+
     <div class="container">
         <div class="navbar">
             <div class="logo">
@@ -15,22 +18,21 @@
             </div>
             <nav>
                 <ul id="menuItems">
-                    <li><a href="#" >Faq</a></li>
-                    <li><a href="#" >Explorar</a></li>
-                    <li><a href="#" >Fórum</a></li>
-                    <li><a href="#" >Criar</a></li>
-                    <li><a href="/Profile/profile.html" >Login</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Criar</a></li>
+                    <li><a href="/Profile/profile.html">Login</a></li>
                 </ul>
             </nav>
             <img src="/imgs/icon-perfil.png" alt="" width="30px">
             <img src="/imgs/menuHam.png" alt="" width="50px" class="menu-icon" onclick="menu()">
         </div>
-        <div class="row">
-            <div class="col-2">
-                
-            </div>
-            <div class="col-2"></div>
+        <div class="banner">
+            <input type="file" id="inputImage" style="display:none;">
+            <img src="/imgs/Banner.png" alt="Imagem" id="imagem" style="cursor:pointer;">
         </div>
+
     </div>
     <div class="perfil">
         <div class="header-perfil" onclick="handleBrowseClick('input-image-hidden');">
@@ -38,13 +40,13 @@
             <h3>Legolas</h3>
             <input style="display:none" type="file" accept="image/*" onchange="loadFile(event, 'output')"
                 id="input-image-hidden">
-            
-        </div> 
+
+        </div>
         <div class="texto">
             <h4 class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore reprehenderit ipsum in
                 nam officia deserunt alias, veniam saepe quas tenetur cumque ullam aperiam placeat possimus. Ratione
                 fugiat est placeat.</h4>
-        </div>       
+        </div>
         <div class="div-social">
 
             <div class="linksSocial">
@@ -72,40 +74,58 @@
                 </a>
             </div>
         </div>
-        
-    </div>
-    <!--
 
-        <div class="repositorios">
-            <div class="col-4">
-                <img src="/frieren.jpg" width="250px"></img>
-            </div>
-            <div class="col-4">
-                <img src="/frieren.jpg" width="250px"></img>
-            </div>
-            <div class="col-4">
-                <img src="/frieren.jpg" width="250px"></img>
-            </div>
-            <div class="col-4">
-                <img src="/frieren.jpg" width="250px"></img>
-            </div>
+    </div>
+
+
+
+    <div class="repositorios">
+        <div class="col-4">
+            <img src="/frieren.jpg" width="250px"></img>
         </div>
-    -->
+        <div class="col-4">
+            <img src="/frieren.jpg" width="250px"></img>
+        </div>
+        <div class="col-4">
+            <img src="/frieren.jpg" width="250px"></img>
+        </div>
+        <div class="col-4">
+            <img src="/frieren.jpg" width="250px"></img>
+        </div>
+    </div>
+
 
     <script>
         var menuItems = document.getElementById("menuItems");
         menuItems.style.maxHeight = "0px";
-        function menu(){
-            if (menuItems.style.maxHeight == "0px") 
-            {
+        function menu() {
+            if (menuItems.style.maxHeight == "0px") {
                 menuItems.style.maxHeight = "200px";
             }
-            else{
+            else {
                 menuItems.style.maxHeight = "0px";
             }
         }
+        // Função para abrir a janela de seleção de arquivo quando a imagem é clicada
+        document.getElementById('imagem').addEventListener('click', function () {
+            document.getElementById('inputImage').click();
+        });
+
+        // Função para exibir a nova imagem selecionada
+        document.getElementById('inputImage').addEventListener('change', function () {
+            const file = this.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                document.getElementById('imagem').src = e.target.result;
+            }
+
+            reader.readAsDataURL(file);
+        });
+
     </script>
     <script src="profScript.js"></script>
-    
+
 </body>
+
 </html>
