@@ -222,7 +222,7 @@ figcaption {
          
     }
     *{
-        overflow-y: hidden;
+        overflow-x: hidden;
     }
     .perfil{
         margin-top: 13rem;       
