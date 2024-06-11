@@ -235,11 +235,14 @@ figcaption {
         margin-left: auto;
         margin-right: auto;
         font-size: 40px ;
-    }    
+    } 
+      
     .div-social{
         display: flex;
-        justify-content: space-between;
-        max-width: 100px;        
+        flex-wrap: nowrap;        
+        max-width: 100px;
+             
+        
     }
     .linksSocial {
         width: 50px;        
@@ -254,8 +257,7 @@ figcaption {
 @media only screen and (max-width: 450px){
     .navbar{
         width: 100%;
-        max-width: 100%;      
-         
+        max-width: 100%;          
     }
     *{
         overflow-x: hidden;
